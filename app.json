@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "NewsReader",
-    "slug": "NewsReader",
+    "name": "Headlines",
+    "slug": "Headlines",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,13 +17,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jkcog.Headlines"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "backgroundColor": "#EEEEEE"
+      },
+      "package": "com.jkcog.Headlines"
     },
     "web": {
       "favicon": "./assets/favicon.png"
