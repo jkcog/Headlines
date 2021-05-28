@@ -1,9 +1,11 @@
 # Headlines
 A minimalist mobile news application with React Native.
 <br>
-The Headlines app retrieves the latest headlines in various news categories.
-
-<img src="/assets/demo.gif"  height="600" alt="app demo gif">
+<br>
+The Headlines app retrieves the latest headlines in various news categories and displays the articles with a minimalist reader view for distraction free, add free consumption.
+Headline View Demo                                           |  Article Reader View
+:-----------------------------------------------------------:|:--------------------------------------------------------------------------:
+<img src="/assets/demo.gif"  height="600" alt="app demo gif">|<img src="/assets/ArticleReader.jpeg"  height="600" alt="reader view demo">
 <br>
 <img src="/assets/headlines.jpg"  height="600" alt="headlines tab">
 <br>
