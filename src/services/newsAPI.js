@@ -6,13 +6,15 @@ const urlHealth = `https://newsapi.org/v2/top-headlines?country=gb&category=heal
 const urlBuisness = `https://newsapi.org/v2/top-headlines?country=gb&category=business&apiKey=${API_KEY}`;
 
 export async function getNews(category) {
-	try {
-		const subject = category
+  try {
+    const subject = category;
 
-		const res = await fetch(`https://newsapi.org/v2/top-headlines?country=gb&category=${category}&apiKey=${API_KEY}`);
-		const data = await res.json();
-		return Promise.resolve(data.articles);
-	} catch(e) {
-		return Promise.reject(e);
-	}
-};
+    const res = await fetch(
+      `https://newsapi.org/v2/top-headlines?country=gb&category=${category}&apiKey=${API_KEY}`
+    );
+    const data = await res.json();
+    return Promise.resolve(data.articles);
+  } catch (e) {
+    return Promise.reject(e);
+  }
+}

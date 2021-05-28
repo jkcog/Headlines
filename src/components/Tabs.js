@@ -1,19 +1,17 @@
-import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import React from "react";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { SafeAreaView, Platform, StatusBar, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
-import News from "./News";
-import Tech from "./Tech";
-import Health from "./Health";
-import Business from "./Business";
-
+import News from "../Screens/News";
+import Tech from "../Screens/Tech";
+import Health from "../Screens/Health";
+import Business from "../Screens/Business";
 
 function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
-    <News />
+      <News />
     </SafeAreaView>
   );
 }
@@ -21,34 +19,33 @@ function HomeScreen() {
 function TechScreen() {
   return (
     <SafeAreaView style={styles.container}>
-    <Tech />
+      <Tech />
     </SafeAreaView>
   );
 }
 
 function HealthScreen() {
-    return (
-        <SafeAreaView style={styles.container}>
-        <Health />
-        </SafeAreaView>
-    );
-  }
+  return (
+    <SafeAreaView style={styles.container}>
+      <Health />
+    </SafeAreaView>
+  );
+}
 
-  function BusinessScreen() {
-    return (
-        <SafeAreaView style={styles.container}>
-        <Business />
-        </SafeAreaView>
-    );
-  }
+function BusinessScreen() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <Business />
+    </SafeAreaView>
+  );
+}
 
 const Tab = createMaterialBottomTabNavigator();
-const tabColour = "#222831"
+const tabColour = "#222831";
 
 function MyTabs() {
   return (
-    <Tab.Navigator >
-
+    <Tab.Navigator>
       <Tab.Screen
         name="Headlines"
         component={HomeScreen}
@@ -60,7 +57,6 @@ function MyTabs() {
           ),
         }}
       />
-
 
       <Tab.Screen
         name="Technology"
@@ -102,19 +98,15 @@ function MyTabs() {
 }
 
 export default function Tabs() {
-  return (
-    <NavigationContainer>
-      <MyTabs />
-    </NavigationContainer>
-  );
+  return <MyTabs />;
 }
 
 const styles = StyleSheet.create({
-	container: {
-	  flex: 1,
-	  backgroundColor: 'black',
-	  alignItems: 'center',
-	  justifyContent: 'center',
-	  paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-	},
-  });
+  container: {
+    flex: 1,
+    backgroundColor: "black",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  },
+});
